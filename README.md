@@ -12,12 +12,39 @@ Point your browser to [www.espruino.com/ide](https://www.espruino.com/ide/).  In
 See our detailed tutorial [Program a Puck.js with puckyActive](https://reelyactive.github.io/program-a-puckjs-with-puckyactive.html).
 
 
+Examples
+--------
+
+There are four examples, each described below.
+
+### Sensing
+
+The __sensing.js__ example will advertise all of the sensor readings available on the Puck.js in a single advertising packet.
+
+### Eddystone-UID
+
+The __eddystone-uid.js__ example will advertise an [Eddystone-UID](https://github.com/google/eddystone/tree/master/eddystone-uid) packet which includes:
+- an 80-bit _namespace_ identifier
+- a 48-bit _instance_ identifier.
+
+### Eddystone-TLM
+
+The __eddystone-tlm.js__ example will advertise an [Eddystone-TLM](https://github.com/google/eddystone/blob/master/eddystone-tlm/tlm-plain.md) packet which includes telemetry data such as:
+- battery voltage
+- temperature
+- advertising count
+- uptime
+
+### Eddystone-TLM with Timeout
+
+The __eddystone-tlm-timeout.js__ example is the same as the above except that it has a programmable timeout duration.  Specifically, after a given number of seconds, the Puck.js will blink red for another given number of seconds then go to sleep.  Pushing the button will wake the device from sleep, reset the Telemetry values and resume activity until the next timeout.
+
 License
 -------
 
 MIT License
 
-Copyright (c) 2017-2018 reelyActive
+Copyright (c) 2017-2019 [reelyActive](https://www.reelyactive.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
